@@ -52,7 +52,11 @@ class _ApiScreenState extends State<ApiScreen> {
                   child: ListTile(
                     title: Text(_user.name),
                     subtitle: Text(_user.address.toString()),
-                    leading: CircleAvatar(child: Text(_user.id.toString())),
+                    leading: CircleAvatar(
+                        child: Text(
+                      _user.id.toString(),
+                      style: Theme.of(context).textTheme.headline6,
+                    )),
                   ),
                 );
               },
